@@ -42,11 +42,11 @@ const MovieDetails = () => {
             <img src={movie.Poster} alt={`${movie.Title} Poster`} className="w-72 md:w-96 rounded shadow mb-4" />
             <h2 className="text-3xl font-bold mb-2">{movie.Title}</h2>
             <div className="text-xl mb-1">Year: {movie.Year}</div>
-            <div className="text-lg mb-1">Genre: {movie.Genre}</div>
-            <div className="text-lg mb-1">Cast: {movie.Actors}</div>
-            <div className="text-lg mb-1">IMDB Rating: {movie.imdbRating || "average"}</div>
+            <div className="text-lg mb-1">Genre: {movie.Genre || "No one"}</div>
+            <div className="text-lg mb-1">Cast: {movie.Actors || "Unknown"}</div>
+            <div className="text-lg mb-1">IMDB Rating: {movie.imdbRating || "Average"}</div>
             <div className="text-lg mb-1">Type: {movie.Type}</div>
-            <div className="text-lg mb-1">Plot: {movie.Plot}</div>
+            <div className="text-lg mb-1">Plot: {movie.Plot || "No plot available"}</div>
             {movie.Ratings && movie.Ratings.length > 0 && (
               <div className="mt-2">
                 <strong>Other Ratings:</strong>
