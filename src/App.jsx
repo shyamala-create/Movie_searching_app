@@ -1,10 +1,15 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./pages/home";
+import MovieDetails from "./pages/movieDetails";
 
 const routes = [
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/movie-details/:imdbID",
+    element: <MovieDetails/>
   }
 ];
 const router = createBrowserRouter(routes, {
