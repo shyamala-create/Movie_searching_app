@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 
-const API_URL = "http://www.omdbapi.com/?apikey=e8df346b";
+const API_URL = "https://www.omdbapi.com/?apikey=e8df346b";
 
 const Home = () => {
   const [data, setData] = useState([]);
