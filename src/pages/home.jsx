@@ -14,11 +14,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let url = API_URL + "&s=" + encodeURIComponent(searchTerm) + `&page=${page}`;
-        if (type) {
-          url += `&type=${type}`;
-        }
-        const response = await axios.get(url);
+        const response = await axios.get(API_URL + "&s=" + `${searchTerm}`);
         setData(response.data.Search || []);
         setTotalCount(Number(response.data.totalResults));
       } catch (error) {
